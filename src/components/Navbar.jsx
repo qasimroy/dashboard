@@ -64,7 +64,8 @@ const Navbar = () => {
                 {Menus.map((menu, index) => (
                     <li
                         key={index}
-                        className={`flex mx-auto rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 text-md items-center gap-x-4 
+                        className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
+                        text-md items-center ${!open ? "" : "gap-x-4"}
                         ${menu.gap ? "mt-9" : "mt-2"} ${
                             selectedIndex === index
                                 ? "bg-white bg-opacity-30"
@@ -74,7 +75,9 @@ const Navbar = () => {
                             setSelectedIndex(index);
                         }}
                     >
-                        <span className="text-lg">{menu.src}</span>
+                        <span className="text-lg flex justify-center">
+                            {menu.src}
+                        </span>
                         <span
                             className={`${
                                 !open && "hidden"
