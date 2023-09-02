@@ -11,7 +11,7 @@ import { BsChatText, BsCalendarDate } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 
 const Navbar = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const Menus = [
@@ -24,16 +24,6 @@ const Navbar = () => {
         { title: "Files ", src: <AiOutlineFolder />, gap: true },
         { title: "Setting", src: <AiOutlineSetting /> },
     ];
-
-    const handleResize = () => {
-        setOpen(window.innerWidth > 768);
-    };
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     return (
         <div
@@ -81,7 +71,7 @@ const Navbar = () => {
                         <span
                             className={`${
                                 !open && "hidden"
-                            } origin-left duration-200`}
+                            } origin-left duration-300`}
                         >
                             {menu.title}
                         </span>

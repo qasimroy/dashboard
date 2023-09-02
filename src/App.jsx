@@ -1,11 +1,13 @@
 import Dashboard from "./components/Dashboard";
+import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 
 function App() {
     return (
         <div className="flex">
-            <Navbar />
-            <Dashboard />
+            <Layout>
+                <Dashboard />
+            </Layout>
         </div>
     );
 }
