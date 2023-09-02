@@ -40,8 +40,8 @@ const Navbar = () => {
             >
                 <BiLeftArrowAlt />
             </div>
-            <div className="flex gap-x-4 items-center">
-                <img src={Logo} alt="logo icon" className="cursor-pointer" />
+            <div className="flex gap-x-4 items-center cursor-pointer">
+                <img src={Logo} alt="logo icon" />
                 <h1
                     className={`text-white font-medium text-xl origin-left duration-200 ${
                         !open && "scale-0"
@@ -52,30 +52,37 @@ const Navbar = () => {
             </div>
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
-                    <li
-                        key={index}
-                        className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
+                    <>
+                        {menu.gap ? (
+                            <hr className="text-white opacity-25 mt-2" />
+                        ) : (
+                            ""
+                        )}
+                        <li
+                            key={index}
+                            className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
                         text-md items-center ${!open ? "" : "gap-x-4"}
                         ${menu.gap ? "mt-9" : "mt-2"} ${
-                            selectedIndex === index
-                                ? "bg-white bg-opacity-30"
-                                : ""
-                        }`}
-                        onClick={() => {
-                            setSelectedIndex(index);
-                        }}
-                    >
-                        <span className="text-lg flex justify-center">
-                            {menu.src}
-                        </span>
-                        <span
-                            className={`${
-                                !open && "hidden"
-                            } origin-left duration-300`}
+                                selectedIndex === index
+                                    ? "bg-white bg-opacity-30"
+                                    : ""
+                            }`}
+                            onClick={() => {
+                                setSelectedIndex(index);
+                            }}
                         >
-                            {menu.title}
-                        </span>
-                    </li>
+                            <span className="text-lg flex justify-center">
+                                {menu.src}
+                            </span>
+                            <span
+                                className={`${
+                                    !open && "hidden"
+                                } origin-left duration-300`}
+                            >
+                                {menu.title}
+                            </span>
+                        </li>
+                    </>
                 ))}
             </ul>
         </div>
