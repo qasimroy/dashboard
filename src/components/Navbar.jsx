@@ -74,7 +74,7 @@ const Navbar = () => {
         <div
             className={`${
                 open ? "w-96" : "w-20"
-            } bg-blue-950 h-screen p-5  pt-8 relative duration-300 rounded-e-xl`}
+            } bg-blue-950 h-screen p-5 pt-8 relative duration-200 rounded-e-xl`}
         >
             <div
                 className={`absolute text-blue-950 p-1 bg-white cursor-pointer -right-3 top-9 w-7 border-blue-950
@@ -98,11 +98,7 @@ const Navbar = () => {
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
                     <React.Fragment key={index}>
-                        {menu.gap ? (
-                            <hr className="text-white opacity-25 mt-2" />
-                        ) : (
-                            ""
-                        )}
+                        {menu.gap ? <hr className=" opacity-20 mt-2" /> : ""}
                         <li
                             key={`${index}`}
                             className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
@@ -119,7 +115,7 @@ const Navbar = () => {
                             </span>
                             <span
                                 className={`${
-                                    !open && "hidden"
+                                    !open && "scale-0"
                                 } origin-left duration-300`}
                             >
                                 {menu.title}
