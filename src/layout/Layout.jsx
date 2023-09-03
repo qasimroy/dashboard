@@ -12,7 +12,7 @@ import Setting from "../pages/Setting";
 
 const Layout = () => {
     return (
-        <React.Fragment>
+        <>
             <div className="flex">
                 <Navbar />
                 <Routes>
@@ -26,7 +26,7 @@ const Layout = () => {
                     <Route path="/settings" element={<Setting />} />
                 </Routes>
             </div>
-        </React.Fragment>
+        </>
     );
 };
 
