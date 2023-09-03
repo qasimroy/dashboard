@@ -9,10 +9,24 @@ import {
 import { LuLayoutDashboard } from "react-icons/lu";
 import { BsChatText, BsCalendarDate } from "react-icons/bs";
 import Logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [open, setOpen] = useState(
+        localStorage.getItem("sidebarOpen") === "true" || false
+    );
+    const [selectedIndex, setSelectedIndex] = useState(
+        parseInt(localStorage.getItem("selectedItemIndex")) || 0
+    );
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.setItem("selectedItemIndex", selectedIndex.toString());
+    }, [selectedIndex]);
+
+    useEffect(() => {
+        localStorage.setItem("sidebarOpen", open.toString());
+    }, [open]);
 
     const Menus = [
         { title: "Dashboard", src: <LuLayoutDashboard /> },
@@ -24,11 +38,42 @@ const Navbar = () => {
         { title: "Files ", src: <AiOutlineFolder />, gap: true },
         { title: "Setting", src: <AiOutlineSetting /> },
     ];
+    const handleMenuItemClick = (index) => {
+        setSelectedIndex(index);
+        switch (index) {
+            case 0:
+                navigate("/");
+                break;
+            case 1:
+                navigate("/inbox");
+                break;
+            case 2:
+                navigate("/accounts");
+                break;
+            case 3:
+                navigate("/schedule");
+                break;
+            case 4:
+                navigate("/search");
+                break;
+            case 5:
+                navigate("/anaytics");
+                break;
+            case 6:
+                navigate("/files");
+                break;
+            case 7:
+                navigate("/settings");
+                break;
+            default:
+                break;
+        }
+    };
 
     return (
         <div
             className={`${
-                open ? "w-72" : "w-20"
+                open ? "w-96" : "w-20"
             } bg-blue-950 h-screen p-5  pt-8 relative duration-300 rounded-e-xl`}
         >
             <div
@@ -52,24 +97,22 @@ const Navbar = () => {
             </div>
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
-                    <>
+                    <React.Fragment key={index}>
                         {menu.gap ? (
                             <hr className="text-white opacity-25 mt-2" />
                         ) : (
                             ""
                         )}
                         <li
-                            key={index}
+                            key={`${index}`}
                             className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
-                        text-md items-center ${!open ? "" : "gap-x-4"}
-                        ${menu.gap ? "mt-9" : "mt-2"} ${
+                            text-md items-center ${!open ? "" : "gap-x-4"}
+                            ${menu.gap ? "mt-9" : "mt-2"} ${
                                 selectedIndex === index
                                     ? "bg-white bg-opacity-30"
                                     : ""
                             }`}
-                            onClick={() => {
-                                setSelectedIndex(index);
-                            }}
+                            onClick={() => handleMenuItemClick(index)}
                         >
                             <span className="text-lg flex justify-center">
                                 {menu.src}
@@ -82,7 +125,7 @@ const Navbar = () => {
                                 {menu.title}
                             </span>
                         </li>
-                    </>
+                    </React.Fragment>
                 ))}
             </ul>
         </div>

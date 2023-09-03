@@ -1,14 +1,9 @@
-import Dashboard from "./components/Dashboard";
-import Layout from "./components/Layout";
-import Navbar from "./components/Navbar";
-
+import Layout from "./layout/Layout";
 function App() {
     return (
-        <div className="flex">
-            <Layout>
-                <Dashboard />
-            </Layout>
-        </div>
+        <>
+            <Layout />
+        </>
     );
 }
 
