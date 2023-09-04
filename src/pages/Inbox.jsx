@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Inbox = () => {
-    return <div className="p-8 text-2xl font-bold w-full h-screen">Inbox</div>;
+    return (
+        <div className="w-full h-screen">
+            <Navbar title="Inbox" />
+        </div>
+    );
 };
 
 export default Inbox;

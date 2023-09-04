@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Setting = () => {
     return (
-        <div className="p-8 text-2xl font-bold w-full h-screen">Settings</div>
+        <div className="w-full h-screen">
+            <Navbar title="Settings" />
+        </div>
     );
 };
 

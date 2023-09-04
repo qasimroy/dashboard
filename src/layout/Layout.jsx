@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import SideNavbar from "../components/SideNavbar";
 import Dashboard from "../pages/Dashboard";
 import Inbox from "../pages/Inbox";
 import Account from "../pages/Account";
@@ -14,7 +14,7 @@ const Layout = () => {
     return (
         <>
             <div className="flex">
-                <Navbar />
+                <SideNavbar />
                 <Routes>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/inbox" element={<Inbox />} />
@@ -29,5 +29,4 @@ const Layout = () => {
         </>
     );
 };
-
 export default Layout;

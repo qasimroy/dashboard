@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Schedule = () => {
     return (
-        <div className="p-8 text-2xl font-bold w-full h-screen">Schedule</div>
+        <div className="w-full h-screen">
+            <Navbar title="Schedule" />
+        </div>
     );
 };
 

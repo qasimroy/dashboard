@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Analytics = () => {
     return (
-        <div className="p-8 text-2xl font-bold w-full h-screen">Analytics</div>
+        <div className="w-full h-screen">
+            <Navbar title="Analytics" />
+        </div>
     );
 };
 

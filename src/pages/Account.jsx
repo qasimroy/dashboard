@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Account = () => {
     return (
-        <div className="p-8 text-2xl font-bold w-full h-screen">Account</div>
+        <div className="w-full h-screen">
+            <Navbar title="Account" />
+        </div>
     );
 };
 
