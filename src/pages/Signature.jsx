@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-const Files = () => {
+const Signature = () => {
     return (
         <div className="w-full h-screen">
-            <Navbar title="Files" />
+            <Navbar title="E-Signature" />
         </div>
     );
 };
 
-export default Files;
+export default Signature;

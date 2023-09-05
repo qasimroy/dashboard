@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BiLeftArrowAlt, BiSearchAlt } from "react-icons/bi";
-import { FiUser } from "react-icons/fi";
-import {
-    AiOutlineAreaChart,
-    AiOutlineFolder,
-    AiOutlineSetting,
-} from "react-icons/ai";
-import { LuLayoutDashboard } from "react-icons/lu";
-import { BsChatText, BsCalendarDate } from "react-icons/bs";
+import { BiLeftArrowAlt, BiTaxi } from "react-icons/bi";
+import { AiOutlineFolder, AiOutlineSetting } from "react-icons/ai";
+import { TbFileInvoice } from "react-icons/tb";
+import { LuLayoutDashboard, LuFileSignature } from "react-icons/lu";
+import { BsCalendarDate } from "react-icons/bs";
+import { MdReportGmailerrorred } from "react-icons/md";
 import Logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -30,12 +27,12 @@ const SideNavbar = () => {
 
     const Menus = [
         { title: "Dashboard", src: <LuLayoutDashboard /> },
-        { title: "Inbox", src: <BsChatText /> },
-        { title: "Accounts", src: <FiUser />, gap: true },
+        { title: "Complaint", src: <MdReportGmailerrorred /> },
+        { title: "Drivers", src: <BiTaxi />, gap: true },
         { title: "Schedule ", src: <BsCalendarDate /> },
-        { title: "Search", src: <BiSearchAlt /> },
-        { title: "Analytics", src: <AiOutlineAreaChart /> },
-        { title: "Files ", src: <AiOutlineFolder />, gap: true },
+        { title: "Reciept", src: <TbFileInvoice /> },
+        { title: "E-Signature", src: <LuFileSignature /> },
+        { title: "Documents ", src: <AiOutlineFolder />, gap: true },
         { title: "Setting", src: <AiOutlineSetting /> },
     ];
     const handleMenuItemClick = (index) => {
@@ -45,22 +42,22 @@ const SideNavbar = () => {
                 navigate("/");
                 break;
             case 1:
-                navigate("/inbox");
+                navigate("/complaint");
                 break;
             case 2:
-                navigate("/accounts");
+                navigate("/drivers");
                 break;
             case 3:
                 navigate("/schedule");
                 break;
             case 4:
-                navigate("/search");
+                navigate("/reciept");
                 break;
             case 5:
-                navigate("/anaytics");
+                navigate("/e-signature");
                 break;
             case 6:
-                navigate("/files");
+                navigate("/documents");
                 break;
             case 7:
                 navigate("/settings");
@@ -73,7 +70,7 @@ const SideNavbar = () => {
     return (
         <div
             className={`${
-                open ? "w-96" : "w-20"
+                open ? "w-80" : "w-20"
             } bg-blue-950 h-screen p-5 pt-8 relative duration-200 rounded-e-xl`}
         >
             <div
@@ -97,11 +94,11 @@ const SideNavbar = () => {
             </div>
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
-                    <React.Fragment key={index}>
+                    <div key={index}>
                         {menu.gap ? <hr className=" opacity-20 mt-2" /> : ""}
                         <li
                             key={`${index}`}
-                            className={`flex rounded-md p-2 cursor-pointer hover:bg-white hover:bg-opacity-30 text-gray-300 
+                            className={`flex rounded-md p-2 cursor-pointer transition duration-300 hover:bg-white hover:bg-opacity-30 text-gray-300 
                             text-md items-center ${!open ? "" : "gap-x-4"}
                             ${menu.gap ? "mt-9" : "mt-2"} ${
                                 selectedIndex === index
@@ -121,7 +118,7 @@ const SideNavbar = () => {
                                 {menu.title}
                             </span>
                         </li>
-                    </React.Fragment>
+                    </div>
                 ))}
             </ul>
         </div>

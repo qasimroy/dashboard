@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-const Search = () => {
+const Reciept = () => {
     return (
         <div className="w-full h-screen">
-            <Navbar title="Search" />
+            <Navbar title="Reciept" />
         </div>
     );
 };
 
-export default Search;
+export default Reciept;

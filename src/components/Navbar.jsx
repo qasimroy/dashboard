@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Navbar = ({ title }) => {
     const [toggle, setToggle] = useState(false);
     return (
-        <div className="flex justify-between p-[20px] border-b-2 shadow-lg">
+        <div className="flex justify-between p-[20px] border-b-2 shadow-sm">
             <span className="text-2xl font-bold ms-4 pt-1">{title}</span>
             <div>
                 <div>
@@ -23,7 +23,7 @@ const Navbar = ({ title }) => {
                         <div>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 transition duration-200 hover:bg-gray-100"
                                 onClick={() => setToggle(!toggle)}
                             >
                                 Your Profile
@@ -33,7 +33,7 @@ const Navbar = ({ title }) => {
                         <div>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 transition duration-200 hover:bg-gray-100"
                                 onClick={() => setToggle(!toggle)}
                             >
                                 Settings
@@ -43,7 +43,7 @@ const Navbar = ({ title }) => {
                         <div>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 transition duration-200 hover:bg-gray-100"
                                 onClick={() => setToggle(!toggle)}
                             >
                                 Sign out

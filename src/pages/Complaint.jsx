@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-const Inbox = () => {
+const Complaint = () => {
     return (
         <div className="w-full h-screen">
-            <Navbar title="Inbox" />
+            <Navbar title="Complaints" />
         </div>
     );
 };
 
-export default Inbox;
+export default Complaint;
