@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Navbar = ({ title }) => {
     const [toggle, setToggle] = useState(false);
     return (
-        <div className="flex justify-between p-[20px] border-b-2 shadow-sm">
+        <div className="flex w-full bg-white justify-between sticky top-0 p-[20px] border-b-2 shadow-sm">
             <span className="text-2xl font-bold ms-4 pt-1">{title}</span>
             <div>
                 <div>

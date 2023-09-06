@@ -74,7 +74,7 @@ const SideNavbar = () => {
             } bg-blue-950 h-screen p-5 pt-8 relative duration-200 rounded-e-xl`}
         >
             <div
-                className={`absolute text-blue-950 p-1 bg-white cursor-pointer -right-3 top-9 w-7 border-blue-950
+                className={`absolute z-10 text-blue-950 p-1 bg-white cursor-pointer -right-3 top-9 w-7 border-blue-950
                 border-2 rounded-full ${!open && "rotate-180"} duration-300`}
                 onClick={() => {
                     setOpen(!open);
