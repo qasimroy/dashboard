@@ -6,15 +6,15 @@ const Login = () => {
 
     return (
         <>
-            <div className="w-full h-screen flex bg-white  justify-center items-center ">
-                <div className="flex flex-col items-center justify-center w-[450px] bg-blue-950 rounded-3xl shadow-2xl p-10">
-                    <div className="py-2">
-                        <h1 className="font-bold text-2xl text-center text-white">
+            <div className="h-screen flex bg-white justify-center items-center  ">
+                <form className="w-full md:w-1/3 rounded-3xl bg-blue-950 items-center">
+                    <div className="flex font-bold justify-center mt-6">
+                        <h1 className="text-3xl text-center text-white mb-4">
                             Login
                         </h1>
                     </div>
-                    <form>
-                        <div>
+                    <div className="px-12 pb-10">
+                        <div className="w-full mb-2">
                             <div className="py-2">
                                 <label
                                     className="text-lg text-white"
@@ -23,14 +23,15 @@ const Login = () => {
                                     Email:
                                 </label>
                             </div>
-                            <input
-                                id="Email"
-                                type="email"
-                                className="border-[1px] p-2 w-[350px] rounded border-blue-950 border-opacity-40 focus:outline-none"
-                                required
-                            />
+                            <div class="flex justify-center">
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    class="px-8  w-full border rounded py-2 text-gray-700 focus:outline-none items-center"
+                                />
+                            </div>
                         </div>
-                        <div>
+                        <div className="w-full mb-2">
                             <div className="py-2">
                                 <label
                                     className="text-lg text-white"
@@ -39,12 +40,11 @@ const Login = () => {
                                     Password:
                                 </label>
                             </div>
-                            <div className="relative">
+                            <div className="flex justify-center relative">
                                 <input
-                                    id="Password"
                                     type={!show ? "password" : "text"}
-                                    className="border-[1px] p-2 w-[350px] rounded border-blue-950 border-opacity-40 focus:outline-none"
-                                    required
+                                    placeholder="Password"
+                                    class="px-8 w-full border rounded py-2 text-gray-700 focus:outline-none"
                                 />
                                 <span
                                     className="absolute top-0 right-0 bg-blue-950 bg-opacity-20 p-[11px]"
@@ -58,20 +58,18 @@ const Login = () => {
                                 </span>
                             </div>
                         </div>
-                        <div>
-                            <div className="py-4">
-                                <a
-                                    href="/"
-                                    type="submit"
-                                    className="border-[1px] text-center cursor-pointer p-2 w-[350px] rounded border-white text-lg text-white hover:bg-white
+                        <div className="py-4">
+                            <a
+                                href="/"
+                                type="submit"
+                                className="border-[1px] text-center cursor-pointer p-2 w-full rounded border-white text-lg text-white hover:bg-white
                                     hover:text-blue-950"
-                                >
-                                    Login
-                                </a>
-                            </div>
+                            >
+                                Login
+                            </a>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </>
     );
