@@ -112,7 +112,7 @@ const SideNavbar = () => {
                             </span>
                             <span
                                 className={`${
-                                    !open && "scale-0"
+                                    !open && " hidden"
                                 } origin-left duration-300`}
                             >
                                 {menu.title}

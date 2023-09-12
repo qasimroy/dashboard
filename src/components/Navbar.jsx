@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ title }) => {
+    const navigate = useNavigate();
     const [toggle, setToggle] = useState(false);
     return (
         <div className="flex w-full bg-white justify-between sticky top-0 p-[20px] border-b-2 shadow-sm">
@@ -42,9 +44,11 @@ const Navbar = ({ title }) => {
                         <hr />
                         <div>
                             <a
-                                href="#"
                                 className="block px-4 py-2 text-sm text-gray-700 transition duration-200 hover:bg-gray-100"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => {
+                                    setToggle(!toggle);
+                                    navigate("/login");
+                                }}
                             >
                                 Sign out
                             </a>

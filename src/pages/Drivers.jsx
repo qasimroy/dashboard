@@ -2,19 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import { BiRightArrowAlt } from "react-icons/bi";
-import Button from "../components/Button";
-import Modal from "../components/Modal";
 
 const Drivers = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openModal = () => {
-        setIsOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsOpen(false);
-    };
     return (
         <div className="w-full h-screen overflow-y-scroll">
             <Navbar title="Drivers" />
@@ -31,8 +20,10 @@ const Drivers = () => {
                         </div>
                         <div className="w-full text-center">
                             <p className="text-lg">Cab 534</p>
-                            <Button onClick={openModal} />
-                            {/* <Modal isOpen={isOpen} closeModal={closeModal} /> */}
+                            <button className="border-[1px] border-gray-300 p-2 transition duration-300 hover:bg-blue-950 hover:text-white rounded flex items-center justify-center gap-1  w-full">
+                                See Details
+                                <BiRightArrowAlt />
+                            </button>
                         </div>
                     </div>
                 </Card>
@@ -48,8 +39,10 @@ const Drivers = () => {
                         </div>
                         <div className="w-full text-center">
                             <p className="text-lg">Cab 534</p>
-                            <Button onClick={openModal} />
-                            {/* <Modal isOpen={isOpen} closeModal={closeModal} /> */}
+                            <button className="border-[1px] border-gray-300 p-2 transition duration-300 hover:bg-blue-950 hover:text-white rounded flex items-center justify-center gap-1  w-full">
+                                See Details
+                                <BiRightArrowAlt />
+                            </button>
                         </div>
                     </div>
                 </Card>

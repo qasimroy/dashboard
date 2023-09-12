@@ -6,8 +6,11 @@ const Complaint = () => {
     return (
         <div className="w-full h-screen overflow-y-scroll ">
             <Navbar title="Complaints" />
-            <div className="w-full pt-4 px-2">
-                <button className="p-2 border-[1px] border-gray-300 rounded float-right bg-blue-950 text-white transition duration-300">
+            <div className="w-full pt-4 px-5">
+                <button
+                    className="p-2 border-[1px] border-gray-300 rounded-lg float-right bg-blue-950 text-white 
+                    transition duration-300"
+                >
                     Open Ticket
                 </button>
             </div>
