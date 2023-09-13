@@ -1,12 +1,9 @@
-import React from "react";
-import Navbar from "../components/Navbar";
+import { Navbar } from "../pages";
 
-const Schedule = () => {
+export const Schedule = () => {
     return (
         <div className="w-full h-screen">
             <Navbar title="Schedule" />
         </div>
     );
 };
-
-export default Schedule;

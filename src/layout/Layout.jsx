@@ -1,8 +1,7 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import SideNavbar from "../components/SideNavbar";
+import { SideNavbar } from "../pages";
 
-const Layout = () => {
+export const Layout = () => {
     return (
         <>
             <div className="flex">
@@ -12,4 +11,3 @@ const Layout = () => {
         </>
     );
 };
-export default Layout;

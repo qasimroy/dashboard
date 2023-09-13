@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-const Login = () => {
+export const Login = () => {
     const [show, setShow] = useState(false);
 
     return (
@@ -74,5 +74,3 @@ const Login = () => {
         </>
     );
 };
-
-export default Login;

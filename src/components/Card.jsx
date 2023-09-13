@@ -1,6 +1,4 @@
-import React from "react";
-
-const Card = ({ children, width }) => {
+export const Card = ({ children, width }) => {
     return (
         <div
             className={`${width} p-2 flex items-center justify-between border-[1px] border-gray-200 border-opacity-70 rounded shadow-lg transition duration-300
@@ -10,5 +8,3 @@ const Card = ({ children, width }) => {
         </div>
     );
 };
-
-export default Card;

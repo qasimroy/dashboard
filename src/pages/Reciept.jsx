@@ -1,12 +1,9 @@
-import React from "react";
-import Navbar from "../components/Navbar";
+import { Navbar } from "../pages";
 
-const Reciept = () => {
+export const Reciept = () => {
     return (
         <div className="w-full h-screen">
             <Navbar title="Reciept" />
         </div>
     );
 };
-
-export default Reciept;

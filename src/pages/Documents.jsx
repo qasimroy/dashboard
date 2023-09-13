@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+import { Navbar } from "../pages";
 
-const Documents = () => {
+export const Documents = () => {
     let time = new Date().toLocaleTimeString();
     const [ntime, setNtime] = useState(time);
     const UpdateTime = () => {
@@ -18,5 +18,3 @@ const Documents = () => {
         </div>
     );
 };
-
-export default Documents;

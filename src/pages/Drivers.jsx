@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import { useState } from "react";
+import { Navbar, Card } from "../pages";
 import { BiRightArrowAlt } from "react-icons/bi";
 
-const Drivers = () => {
+export const Drivers = () => {
     return (
         <div className="w-full h-screen overflow-y-scroll">
             <Navbar title="Drivers" />
@@ -50,5 +49,3 @@ const Drivers = () => {
         </div>
     );
 };
-
-export default Drivers;

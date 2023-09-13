@@ -1,17 +1,19 @@
-import Layout from "./layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Complaint from "./pages/Complaint";
-import Drivers from "./pages/Drivers";
-import Signature from "./pages/Signature";
-import Documents from "./pages/Documents";
-import Schedule from "./pages/Schedule";
-import Reciept from "./pages/Reciept";
-import Setting from "./pages/Setting";
-import Login from "./pages/Login";
-import Error from "./pages/Error";
+import {
+    Dashboard,
+    Complaint,
+    Drivers,
+    Signature,
+    Documents,
+    Schedule,
+    Reciept,
+    Setting,
+    Login,
+    Error,
+    Layout,
+} from "./pages";
 
-function App() {
+export function App() {
     return (
         <BrowserRouter>
             <Routes>
@@ -31,5 +33,3 @@ function App() {
         </BrowserRouter>
     );
 }
-
-export default App;

@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import { Navbar, Card } from "../pages";
 
-const Complaint = () => {
+export const Complaint = () => {
     return (
         <div className="w-full h-screen overflow-y-scroll ">
             <Navbar title="Complaints" />
@@ -103,5 +102,3 @@ const Complaint = () => {
         </div>
     );
 };
-
-export default Complaint;

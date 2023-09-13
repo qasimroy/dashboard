@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ title }) => {
+export const Navbar = ({ title }) => {
     const navigate = useNavigate();
     const [toggle, setToggle] = useState(false);
     return (
@@ -59,5 +59,3 @@ const Navbar = ({ title }) => {
         </div>
     );
 };
-
-export default Navbar;

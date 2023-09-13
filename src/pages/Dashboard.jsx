@@ -1,11 +1,9 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import { Navbar, Card } from "../pages";
 import { BiTaxi } from "react-icons/bi";
 import { TbSignature, TbSignatureOff } from "react-icons/tb";
 import { MdReportGmailerrorred, MdOutlineReportOff } from "react-icons/md";
 
-const Dashboard = () => {
+export const Dashboard = () => {
     return (
         <>
             <div className="w-full h-screen container overflow-y-scroll">
@@ -70,5 +68,3 @@ const Dashboard = () => {
         </>
     );
 };
-
-export default Dashboard;

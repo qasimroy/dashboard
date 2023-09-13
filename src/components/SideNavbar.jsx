@@ -8,7 +8,7 @@ import { MdReportGmailerrorred } from "react-icons/md";
 import Logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
-const SideNavbar = () => {
+export const SideNavbar = () => {
     const [open, setOpen] = useState(
         localStorage.getItem("sidebarOpen") === "true" || false
     );
@@ -124,5 +124,3 @@ const SideNavbar = () => {
         </div>
     );
 };
-
-export default SideNavbar;
