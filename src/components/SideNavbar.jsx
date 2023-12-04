@@ -82,7 +82,12 @@ export const SideNavbar = () => {
             >
                 <BiLeftArrowAlt />
             </div>
-            <div className="flex gap-x-4 items-center cursor-pointer">
+            <div
+                className="flex gap-x-4 items-center cursor-pointer"
+                onClick={() => {
+                    navigate("/");
+                }}
+            >
                 <img src={Logo} alt="logo icon" />
                 <h1
                     className={`text-white font-medium text-xl origin-left duration-200 ${

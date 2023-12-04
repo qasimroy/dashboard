@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
     const [show, setShow] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Login";
+    });
 
     return (
         <>
@@ -60,10 +66,12 @@ export const Login = () => {
                         </div>
                         <div className="py-4">
                             <a
-                                href="/"
                                 type="submit"
                                 className="border-[1px] text-center cursor-pointer p-2 w-full rounded border-white text-lg text-white hover:bg-white
                                     hover:text-blue-950"
+                                onClick={() => {
+                                    navigate("/");
+                                }}
                             >
                                 Login
                             </a>

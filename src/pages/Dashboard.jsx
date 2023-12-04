@@ -2,11 +2,15 @@ import { Navbar, Card } from "../pages";
 import { BiTaxi } from "react-icons/bi";
 import { TbSignature, TbSignatureOff } from "react-icons/tb";
 import { MdReportGmailerrorred, MdOutlineReportOff } from "react-icons/md";
+import { useEffect } from "react";
 
 export const Dashboard = () => {
+    useEffect(() => {
+        document.title = "Dashboard";
+    });
     return (
         <>
-            <div className="w-full h-screen container overflow-y-scroll">
+            <div className="w-full h-screen container">
                 <Navbar title="Dashboard" />
                 <div className="w-full flex flex-wrap justify-center gap-4 p-4 container">
                     <Card width="w-60">

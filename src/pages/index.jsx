@@ -11,4 +11,6 @@ export * from "./Signature";
 export * from "../components/SideNavbar";
 export * from "../components/Navbar";
 export * from "../components/Card";
+export * from "../components/Modal";
+export * from "../components/Table";
 export * from "../layout/Layout";

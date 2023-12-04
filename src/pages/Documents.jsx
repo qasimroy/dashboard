@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../pages";
 
 export const Documents = () => {
+    useEffect(() => {
+        document.title = "Documents";
+    });
     let time = new Date().toLocaleTimeString();
     const [ntime, setNtime] = useState(time);
     const UpdateTime = () => {
