@@ -11,30 +11,35 @@ export const Complaint = () => {
             category: "Software",
             issue: "Issue about the zone",
             created_at: "16:00 / 09-07-2023",
+            status: "Open",
         },
         {
             cab_no: 712,
             category: "Tablet",
             issue: "Tablet getting stuck",
             created_at: "16:00 / 09-07-2023",
+            status: "Open",
         },
         {
             cab_no: 593,
             category: "Software",
             issue: "Losing position on Short Break",
             created_at: "16:00 / 09-07-2023",
+            status: "Closed",
         },
         {
             cab_no: 821,
             category: "OT List",
             issue: "Number got changed in List",
             created_at: "16:00 / 09-07-2023",
+            status: "Open",
         },
         {
             cab_no: 324,
             category: "OT Trip",
             issue: "Someone done OT Trip on my number",
             created_at: "16:00 / 09-07-2023",
+            status: "Closed",
         },
     ];
     return (
@@ -45,6 +50,7 @@ export const Complaint = () => {
                     title="Open Ticket"
                     heading="Open a Ticket"
                     fBtn="Create"
+                    btnPos="w-24 float-right"
                 >
                     <div className="p-2 mb-4">
                         <span className="text-gray-700">Issue</span>
@@ -91,6 +97,15 @@ export const Complaint = () => {
                                     </p>
                                     <p className="text-xs pt-2">
                                         created at: {data.created_at}
+                                    </p>
+                                    <p
+                                        className={`text-xs pt-2 font-bold ${
+                                            data.status === "Open"
+                                                ? "text-green-600"
+                                                : "text-red-600"
+                                        }`}
+                                    >
+                                        Status: {data.status}
                                     </p>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 
-export const Modal = ({ title, heading, children, fBtn }) => {
+export const Modal = ({ title, heading, children, fBtn, btnPos }) => {
     const [isOpen, setOpen] = useState(false);
 
     const closeModal = () => {
@@ -23,9 +23,9 @@ export const Modal = ({ title, heading, children, fBtn }) => {
     }, []);
     return (
         <div>
-            <div>
+            <div className={btnPos}>
                 <button
-                    className="p-2 border-[1px] border-gray-300 rounded-lg float-right bg-blue-950 text-white 
+                    className="p-2 border-[1px] border-gray-400 text-sm rounded w-full hover:bg-blue-950 text-black hover:text-white
                     transition duration-300"
                     onClick={openModel}
                 >
