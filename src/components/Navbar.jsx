@@ -36,7 +36,10 @@ export const Navbar = ({ title }) => {
                             <a
                                 href="#"
                                 className="block px-4 py-2 text-sm text-gray-700 transition duration-200 hover:bg-gray-100"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => {
+                                    setToggle(!toggle);
+                                    navigate("/settings");
+                                }}
                             >
                                 Settings
                             </a>

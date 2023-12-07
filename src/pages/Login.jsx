@@ -51,6 +51,7 @@ export const Login = () => {
                                     type={!show ? "password" : "text"}
                                     placeholder="Password"
                                     class="px-8 w-full border rounded py-2 text-gray-700 focus:outline-none"
+                                    autocomplete="username"
                                 />
                                 <span
                                     className="absolute top-0 right-0 bg-blue-950 bg-opacity-20 p-[11px]"
