@@ -12,7 +12,7 @@ export const Signature = () => {
             <Navbar title="E-Signature" />
             <div className="h-4/5 w-full flex flex-col lg:flex-row justify-center items-center gap-4 ">
                 <div className="w-60 rounded-3xl">
-                    <button className=" button">
+                    <button className=" flex justify-center items-center py-8 w-full h-full hover:bg-opacity-100 hover:text-white bg-blue-950 bg-opacity-30 text-lg font-bold transition duration-200 rounded-3xl">
                         <span className="flex items-center">
                             <span className="text-2xl mr-2">
                                 <RiSendPlaneLine />
@@ -22,7 +22,7 @@ export const Signature = () => {
                     </button>
                 </div>
                 <div className="w-60 rounded-3xl">
-                    <button className="button">
+                    <button className="flex justify-center items-center py-8 w-full h-full hover:bg-opacity-100 hover:text-white bg-blue-950 bg-opacity-30 text-lg font-bold transition duration-200 rounded-3xl">
                         <span className="flex items-center">
                             <span className="text-2xl mr-2">
                                 <TbSignature />
@@ -32,7 +32,7 @@ export const Signature = () => {
                     </button>
                 </div>
                 <div className="w-60 rounded-3xl">
-                    <button className="button">
+                    <button className="flex justify-center items-center py-8 w-full h-full hover:bg-opacity-100 hover:text-white bg-blue-950 bg-opacity-30 text-lg font-bold transition duration-200 rounded-3xl">
                         <span className="flex items-center">
                             <span className="text-2xl mr-2">
                                 <TbSignatureOff />
