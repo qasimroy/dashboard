@@ -112,7 +112,7 @@ export const SideNavbar = () => {
                             }`}
                             onClick={() => handleMenuItemClick(index)}
                         >
-                            <span className="text-lg flex justify-center">
+                            <span className="text-xl flex justify-center">
                                 {menu.src}
                             </span>
                             <span
