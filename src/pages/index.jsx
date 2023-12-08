@@ -8,7 +8,7 @@ export * from "./Login";
 export * from "./Schedule";
 export * from "./Setting";
 export * from "./Signature";
-export * from "../components/SideNavbar";
+export * from "../components/SideNavbar/SideNavbar";
 export * from "../components/Navbar";
 export * from "../components/Card";
 export * from "../components/Modal";

@@ -5,8 +5,9 @@ import { TbFileInvoice } from "react-icons/tb";
 import { LuLayoutDashboard, LuFileSignature } from "react-icons/lu";
 import { BsCalendarDate } from "react-icons/bs";
 import { MdReportGmailerrorred } from "react-icons/md";
-import Logo from "../assets/logo.png";
+import Logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 export const SideNavbar = () => {
     const [open, setOpen] = useState(
@@ -100,12 +101,12 @@ export const SideNavbar = () => {
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
                     <div key={index}>
-                        {menu.gap ? <hr className=" opacity-20 mt-2" /> : ""}
-                        <li
+                        {menu.gap ? <hr className="opacity-20 mt-2" /> : ""}
+                        <div
                             key={`${index}`}
-                            className={`flex rounded-md p-2 cursor-pointer transition duration-300 hover:bg-white hover:bg-opacity-30 text-gray-300 
-                            text-md items-center ${!open ? "" : "gap-x-4"}
-                            ${menu.gap ? "mt-9" : "mt-2"} ${
+                            className={`flex justify-start items-center gap-3 rounded-md p-2 cursor-pointer transition duration-300 hover:bg-white hover:bg-opacity-30 text-gray-300 
+                        text-md  ${!open ? "tooltip" : ""} 
+                        ${menu.gap ? "mt-9" : "mt-2"} ${
                                 selectedIndex === index
                                     ? "bg-white bg-opacity-30"
                                     : ""
@@ -117,12 +118,19 @@ export const SideNavbar = () => {
                             </span>
                             <span
                                 className={`${
-                                    !open && " hidden"
-                                } origin-left duration-300`}
+                                    !open ? "" : "hidden"
+                                } origin-left duration-300 tooltiptext`}
                             >
                                 {menu.title}
                             </span>
-                        </li>
+                            <span
+                                className={`${
+                                    !open && "hidden"
+                                } origin-left duration-300 tooltiptext`}
+                            >
+                                {menu.title}
+                            </span>
+                        </div>
                     </div>
                 ))}
             </ul>
