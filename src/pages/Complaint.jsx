@@ -53,14 +53,6 @@ export const Complaint = () => {
                     btnPos="w-24 float-right"
                 >
                     <div className="p-2 mb-4">
-                        <span className="text-gray-700">Issue</span>
-                        <input
-                            type="text"
-                            placeholder="e.g., Issue about zone"
-                            className="p-2  w-full border-b border-gray-950 focus:outline-none focus:border-b focus:border-blue-500"
-                        />
-                        <br />
-                        <br />
                         <span className="text-gray-700">Category</span>
                         <select
                             name="category"
@@ -73,6 +65,14 @@ export const Complaint = () => {
                             <option value="otlist">Out of Town List</option>
                             <option value="ottrip">Out of Town Trip</option>
                         </select>
+                        <br />
+                        <br />
+                        <span className="text-gray-700">Issue</span>
+                        <input
+                            type="text"
+                            placeholder="e.g., Issue about zone"
+                            className="p-2  w-full border-b border-gray-950 focus:outline-none focus:border-b focus:border-blue-500"
+                        />
                         <br />
                         <br />
                     </div>

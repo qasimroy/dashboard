@@ -119,7 +119,7 @@ export const SideNavbar = () => {
                             <span
                                 className={`${
                                     !open ? "" : "hidden"
-                                } origin-left duration-300 tooltiptext`}
+                                } text-sm origin-left duration-300 tooltiptext`}
                             >
                                 {menu.title}
                             </span>
