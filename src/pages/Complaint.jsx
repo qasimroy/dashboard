@@ -67,7 +67,7 @@ export const Complaint = () => {
                         </select>
                         <br />
                         <br />
-                        <span className="text-gray-700">Issue</span>
+                        <span className="text-gray-700">Subject</span>
                         <input
                             type="text"
                             placeholder="e.g., Issue about zone"
@@ -75,6 +75,28 @@ export const Complaint = () => {
                         />
                         <br />
                         <br />
+                        <span className="text-gray-700">Issue</span>
+                        <textarea
+                            name="issue"
+                            id="issue"
+                            className="p-2
+                            w-full
+                            border-b
+                            border-gray-950
+                            focus:outline-none
+                            focus:border-b
+                            focus:border-blue-500
+                            resize-none
+                            bg-gray-100
+                            focus:bg-inherit
+                            transition-colors
+                            duration-300
+                            overflow-hidden
+                            focus:overflow-y-scroll
+                            "
+                            cols="30"
+                            rows="4"
+                        ></textarea>
                     </div>
                 </Modal>
             </div>
